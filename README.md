@@ -36,5 +36,5 @@ Run the following command to start the development server:
 
 npm run dev
 
-copy the the url adress and you ready to go!
+Open your web browser and visit the provided URL to see the project in development mode.
 
