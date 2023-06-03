@@ -3,9 +3,9 @@
       <h1>Path Angel</h1>
       <nav>
         <ul>
-          <li><a href="/">Search</a></li>
-          <li><a href="/findallusers">Find All Users</a></li>
-          <li><a href="/update">Update</a></li>
+          <li><a href="/">Search Angel</a></li>
+          <li><a href="/findallusers">Find All The Angels</a></li>
+          <li><a href="/update">Update Angel</a></li>
           <li><a href="/signup">Signup Form</a></li>
           <!-- <li><a href="/delete">Delete all</a></li> -->
         </ul>

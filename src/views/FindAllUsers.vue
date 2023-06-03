@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       userSuperapp: '2023b.noy.tsafrir', // Replace with the actual value for userSuperapp
-      userEmail: 'sha@g.com', // Replace with the actual value for userEmail
+      userEmail: 'admin@admin.com', // Replace with the actual value for userEmail
       size: 10, // Replace with the desired default value for size
       page: 0, // Replace with the desired default value for page
       users: []
@@ -40,22 +40,23 @@ export default {
   },
   methods: {
     fetchUsers() {
-      const url = 'http://localhost:8081/superapp/admin/users';
-      const params = {
-        userSuperapp: this.userSuperapp,
-        userEmail: this.userEmail,
-        size: this.size,
-        page: this.page
-      };
+  const url = 'http://localhost:8081/superapp/admin/users';
+  const params = {
+    userSuperapp: this.userSuperapp,
+    userEmail: this.userEmail,
+    size: this.size,
+    page: this.page
+  };
 
-      axios.get(url, { params })
-        .then(response => {
-          this.users = response.data;
-        })
-        .catch(error => {
-          console.error('Error retrieving users:', error);
-        });
-    }
+  axios.get(url, { params })
+    .then(response => {
+      this.users = response.data.filter(user => user.username !== 'DummyObject internal user');
+    })
+    .catch(error => {
+      console.error('Error retrieving users:', error);
+    });
+}
+
   }
 };
 </script>
